@@ -1,0 +1,80 @@
+# AI Daily News - Automated Workflow
+# Runs daily at 8:00 AM NZ time (UTC+13) = 19:00 UTC (previous day)
+# Also can be triggered manually
+
+name: Generate AI Daily News
+
+on:
+  # Run at 8:00 AM New Zealand time every day
+  schedule:
+    - cron: '0 19 * * *'  # 19:00 UTC = 08:00 NZDT
+  
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      skip_notion:
+        description: 'Skip Notion publishing'
+        required: false
+        default: 'false'
+        type: boolean
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  generate-news:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🔍 Fetch and generate news report
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-report.js
+
+      - name: 📤 Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # Add all generated files
+          git add docs/index.html
+          git add "AI_Daily_News_*.html" || true
+          git add latest-summary.json || true
+          
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            DATE=$(date +%Y-%m-%d)
+            git commit -m "🤖 Auto-generate AI news for ${DATE}"
+            git push
+          fi
+
+      - name: 📝 Publish to Notion
+        if: ${{ github.event.inputs.skip_notion != 'true' }}
+        env:
+          NOTION_API_TOKEN: ${{ secrets.NOTION_API_TOKEN }}
+          NOTION_PARENT_PAGE_ID: ${{ secrets.NOTION_PARENT_PAGE_ID }}
+        run: npm run publish
+
+      - name: ✅ Summary
+        run: |
+          echo "## 🤖 AI Daily News Generated!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📅 Date: $(date +%Y-%m-%d)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Links" >> $GITHUB_STEP_SUMMARY
+          echo "- 🌐 [GitHub Pages](https://hxjnz.github.io/ai-news-daily/)" >> $GITHUB_STEP_SUMMARY
+          echo "- 📝 [Notion](https://www.notion.so/AI-2f764c52f737804da953c1eac61d5f16)" >> $GITHUB_STEP_SUMMARY

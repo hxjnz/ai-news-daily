@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "fetch": "node scripts/fetch-news.js",
+    "generate": "node scripts/generate-report.js",
     "publish": "node publish-to-notion.js",
+    "all": "npm run generate && npm run publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["ai", "news", "daily", "automation"],
+  "author": "AI News Daily",
   "license": "ISC",
-  "description": "",
+  "description": "Automated AI news aggregation and publishing",
   "dependencies": {
     "@notionhq/client": "^5.9.0",
     "dotenv": "^17.2.3"
