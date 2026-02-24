@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 每日速报 | 2026-02-24</title>
+    <title>AI 每日速报 | 2026-02-25</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,7 +106,7 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-                实时更新 · 2026年02月24日 周二
+                实时更新 · 2026年02月25日 周三
             </div>
             
             <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
@@ -119,7 +119,7 @@
             
             <div class="flex flex-wrap justify-center gap-4 text-white/60 text-sm mb-12">
                 <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm">
-                    <span>📰</span> 28+ 条新闻
+                    <span>📰</span> 30+ 条新闻
                 </div>
                 <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm">
                     <span>🌐</span> 10+ 来源
@@ -158,125 +158,129 @@
             </div>
             
             <div class="grid gap-6">
-                <!-- Top Story 1: Anthropic Distillation -->
+                <!-- Top Story 1 -->
                 <article class="news-card glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="category-badge px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-semibold uppercase">重磅安全</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-semibold uppercase">产业动态</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">TechCrunch</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+                        💰 Meta 与 AMD 签署高达 $100B AI 芯片协议，追逐"个人超级智能"
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
+                        Meta 与 AMD 签署多年期协议，购买价值高达 1000 亿美元的 AI 处理器用于数据中心建设。此前一周 Meta 刚从 Nvidia 采购了数百万颗 AI 芯片。该协议可能使 Meta 持有 AMD 10% 的股份，凸显 AI 基础设施军备竞赛的白热化程度。
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
+                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                            协议金额高达 $100B
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
+                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                            Meta 或持有 AMD 10% 股份
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
+                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                            追逐"个人超级智能"愿景
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-400">影响分析: AI 芯片市场格局重塑，AMD 获重大提振</span>
+                        <a href="https://techcrunch.com/2026/02/25/meta-strikes-up-to-100b-amd-chip-deal-as-it-chases-personal-superintelligence/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
+                            阅读原文 →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Top Story 2 -->
+                <article class="news-card glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="category-badge px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-semibold uppercase">安全</span>
                         <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">Anthropic</span>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
-                        🚨 Anthropic 指控 DeepSeek、Moonshot、MiniMax 大规模蒸馏 Claude 模型
+                        🔒 Anthropic 揭露三大中国 AI 实验室"工业级"蒸馏攻击 Claude
                     </h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
-                        Anthropic 发布重磅报告，揭露三家中国 AI 实验室通过约 24,000 个欺诈账户生成超过 1600 万次对话，非法提取 Claude 的能力来训练自己的模型。其中 MiniMax 产生了超过 1300 万次交互，Moonshot 超过 340 万次，DeepSeek 超过 15 万次。这些攻击针对 Claude 最核心的 Agent 推理、工具使用和编码能力。
+                        Anthropic 公开指控 DeepSeek、Moonshot（月之暗面）和 MiniMax 三家中国 AI 实验室通过约 24,000 个虚假账户生成超过 1600 万次交互，大规模非法蒸馏 Claude 的能力。MiniMax 的攻击规模最大（1300 万次交互），DeepSeek 甚至试图提取 Claude 的思维链推理数据。
                     </p>
                     <div class="flex flex-wrap gap-4 mb-6">
                         <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
                             <span class="w-2 h-2 rounded-full bg-red-500"></span>
-                            1600 万+ 次非法交互
+                            16M+ 次非法交互
                         </div>
                         <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
                             <span class="w-2 h-2 rounded-full bg-red-500"></span>
-                            24,000 个欺诈账户
+                            24,000 个虚假账户
                         </div>
                         <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
                             <span class="w-2 h-2 rounded-full bg-red-500"></span>
-                            涉及国家安全风险
+                            涉及国家安全层面
                         </div>
                     </div>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-400">影响分析: AI 知识产权保护和出口管制的里程碑事件</span>
+                        <span class="text-sm text-gray-400">影响分析: 加剧中美 AI 竞争紧张，强化出口管制论据</span>
                         <a href="https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
                             阅读原文 →
                         </a>
                     </div>
                 </article>
 
-                <!-- Top Story 2: Anthropic accuses Chinese labs -->
+                <!-- Top Story 3 -->
                 <article class="news-card glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="category-badge px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-semibold uppercase">地缘政治</span>
-                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">TechCrunch</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 font-semibold uppercase">重大发布</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">Anthropic</span>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
-                        🇺🇸 Anthropic 指控中国 AI 实验室"挖矿" Claude，正值美国辩论 AI 芯片出口
+                        🔌 Anthropic 推出 Claude Cowork：企业级 Agent 插件平台
                     </h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
-                        在美国政府正在辩论 AI 芯片出口管制政策之际，Anthropic 公开指控中国 AI 实验室系统性地从 Claude 中提取能力。该报告为出口管制提供了新的论据——蒸馏攻击的规模化执行同样依赖先进芯片。
+                        Anthropic 发布全新企业 Agent 推进计划，为金融、工程和设计领域推出专用插件。Claude Cowork 将 AI 深度集成到企业工作流中，支持 Slack、Figma、Asana 等主流工具，标志着 Anthropic 在企业市场的重大布局。
                     </p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-400">影响分析: 可能加速 AI 芯片出口管制政策收紧</span>
-                        <a href="https://techcrunch.com/2026/02/24/anthropic-accuses-chinese-ai-labs-of-mining-claude/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
+                        <span class="text-sm text-gray-400">影响分析: 企业 AI Agent 市场竞争加剧</span>
+                        <a href="https://techcrunch.com/2026/02/25/anthropic-launches-new-push-for-enterprise-agents-with-plug-ins-for-finance-engineering-and-design/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
                             阅读原文 →
                         </a>
                     </div>
                 </article>
 
-                <!-- Top Story 3: Defense Secretary & Anthropic -->
+                <!-- Top Story 4 -->
                 <article class="news-card glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="category-badge px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 font-semibold uppercase">政策法规</span>
-                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">TechCrunch</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-semibold uppercase">产业动态</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">Hacker News</span>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
-                        🏛️ 美国国防部长召见 Anthropic CEO Amodei，讨论 Claude 军事用途
+                        📉 OpenAI 将支出预期从 $1.4T 下调至 $600B
                     </h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
-                        美国国防部长正式召见 Anthropic 创始人 Dario Amodei，就 Claude 在军事领域的应用进行讨论。此前有报道称国防部可能将 Anthropic 列为"供应链风险"。这标志着 AI 安全公司与军方关系的微妙转折。
+                        OpenAI 大幅调整其基础设施支出预期，将 2030 年前的目标从 1.4 万亿美元下调至约 6000 亿美元。此前 Stargate 项目遭遇困难——与 Oracle 和 SoftBank 的 5000 亿美元合作"尚未配备人员，也未开发任何数据中心"。Nvidia 正在就 $30B 股权投资进行谈判。
                     </p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-400">影响分析: AI 企业与军方合作的边界正在被重新定义</span>
-                        <a href="https://techcrunch.com/2026/02/24/defense-secretary-summons-anthropics-amodei-over-military-use-of-claude/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
+                        <span class="text-sm text-gray-400">影响分析: AI 基础设施投资回归理性</span>
+                        <a href="https://www.cnbc.com/2026/02/20/openai-resets-spend-expectations-targets-around-600-billion-by-2030.html" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
                             阅读原文 →
                         </a>
                     </div>
                 </article>
 
-                <!-- Top Story 4: Nvidia OpenAI $30B -->
+                <!-- Top Story 5 -->
                 <article class="news-card glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="category-badge px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-semibold uppercase">产业动态</span>
-                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">The Verge</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-semibold uppercase">政策法规</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">Hacker News</span>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
-                        💰 Nvidia 即将以 300 亿美元投资 OpenAI，此前 1000 亿美元交易搁浅
+                        👁️ OpenAI、美国政府与 Persona 构建身份监控系统引争议
                     </h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
-                        据金融时报报道，此前宣布的 Nvidia 与 OpenAI 1000 亿美元交易已搁浅，取而代之的是 Nvidia 将以 300 亿美元进行股权投资，作为更大融资轮的一部分。该投资可能在本周末敲定。
-                    </p>
-                    <div class="flex flex-wrap gap-4 mb-6">
-                        <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
-                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                            投资金额：$30B
-                        </div>
-                        <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
-                            <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                            原 $100B 交易搁浅
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-400">影响分析: AI 算力巨头与模型巨头的资本深度绑定</span>
-                        <a href="https://www.ft.com/content/dea24046-0a73-40b2-8246-5ac7b7a54323" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
-                            阅读原文 →
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Top Story 5: OpenAI Stargate struggles -->
-                <article class="news-card glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="category-badge px-3 py-1 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 font-semibold uppercase">产业动态</span>
-                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">The Information</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
-                        🏗️ OpenAI 的 5000 亿美元 Stargate 项目陷入困境，紧急寻求算力
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
-                        The Information 报道，OpenAI 与 Oracle、SoftBank 的 5000 亿美元 Stargate 合作项目"尚未组建团队，也没有开发任何 OpenAI 的数据中心"。三方在角色分工上存在分歧，OpenAI 被迫分别与 SoftBank 和 Oracle 达成独立协议。
+                        安全研究人员揭露 OpenAI 与美国政府使用 Persona 身份验证平台构建了一套身份监控机器。该报道在 Hacker News 获得 268 点赞，引发广泛关注。与此同时，Discord 已宣布切断与 Persona 的合作关系。
                     </p>
                     <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-400">影响分析: AI 基础设施建设面临协调挑战</span>
-                        <a href="https://www.theinformation.com/articles/inside-openais-scramble-get-computing-power-stargate-stalled" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
+                        <span class="text-sm text-gray-400">影响分析: AI 隐私与监控问题持续升温</span>
+                        <a href="https://vmfunc.re/blog/persona/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
                             阅读原文 →
                         </a>
                     </div>
@@ -298,84 +302,84 @@
                 <!-- Release Card 1 -->
                 <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-start justify-between mb-4">
-                        <span class="category-badge px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 font-medium">Guide Labs</span>
-                        <span class="text-sm text-gray-400">02-24</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">Google</span>
+                        <span class="text-sm text-gray-400">02-25</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Guide Labs 推出新型可解释 LLM</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">一种全新架构的大语言模型，强调可解释性（Interpretability），让用户能够理解模型的推理过程。</p>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Google 为 Opal 添加自动化工作流创建功能</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Google 在 Opal 平台中新增 AI 驱动的自动化工作流创建功能，用户可以通过自然语言描述来构建复杂的自动化流程。</p>
                     <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">可解释AI</span>
-                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">LLM</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">自动化</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">工作流</span>
                     </div>
                 </article>
 
                 <!-- Release Card 2 -->
                 <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-start justify-between mb-4">
-                        <span class="category-badge px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-medium">Google</span>
-                        <span class="text-sm text-gray-400">02-24</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 font-medium">Google</span>
+                        <span class="text-sm text-gray-400">02-19</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Google Cloud AI 负责人谈模型能力的三大前沿</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Google Cloud AI 副总裁分享了模型能力发展的三大方向，为企业 AI 应用指明路线图。</p>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Gemini 3.1 Pro 发布：核心推理能力大幅提升</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Gemini 3.1 Pro 已在 Gemini App 和 NotebookLM 中上线，专为"简单答案不够"的复杂任务设计，在高级推理方面有显著提升。</p>
                     <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">Cloud AI</span>
-                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">战略</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">LLM</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">推理</span>
                     </div>
                 </article>
 
                 <!-- Release Card 3 -->
                 <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-start justify-between mb-4">
-                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">Spotify</span>
-                        <span class="text-sm text-gray-400">02-24</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-medium">Anthropic</span>
+                        <span class="text-sm text-gray-400">02-17</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Spotify 推出 AI 驱动的 Prompted Playlists</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Spotify 将 AI 驱动的"提示词播放列表"功能扩展到英国及更多市场，用户可用自然语言描述想听的音乐。</p>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Claude Sonnet 4.6 发布：编码、Agent 和专业工作全面升级</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Anthropic 发布 Sonnet 4.6，在编码、Agent 和大规模专业工作方面提供前沿性能，继 Opus 4.6 之后进一步扩展产品线。</p>
                     <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">音乐AI</span>
-                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">消费产品</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">编码</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">Agent</span>
                     </div>
                 </article>
 
                 <!-- Release Card 4 -->
                 <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-start justify-between mb-4">
-                        <span class="category-badge px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-medium">Alibaba</span>
-                        <span class="text-sm text-gray-400">02-18</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-medium">Oura</span>
+                        <span class="text-sm text-gray-400">02-25</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">阿里巴巴发布 Qwen3.5-397B 开源模型</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">总参数 3970 亿但每 token 仅激活 170 亿的 MoE 架构，多项基准超越自家万亿参数的 Qwen3-Max。</p>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Oura 推出专注女性健康的专有 AI 模型</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">智能戒指公司 Oura 推出专有 AI 模型，覆盖"从早期月经周期到更年期的完整生殖健康谱系"，完全在 Oura 控制的基础设施上运行。</p>
                     <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">开源模型</span>
-                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">MoE</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">健康</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">可穿戴</span>
                     </div>
                 </article>
 
                 <!-- Release Card 5 -->
                 <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-start justify-between mb-4">
-                        <span class="category-badge px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-medium">Google</span>
-                        <span class="text-sm text-gray-400">02-19</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-medium">New Relic</span>
+                        <span class="text-sm text-gray-400">02-25</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Gemini 3.1 Pro 发布：核心推理能力大幅提升</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Google 发布 Gemini 3.1 Pro，在 Gemini App 和 NotebookLM 中上线，专为复杂推理任务设计。</p>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">New Relic 推出 AI Agent 平台和 OpenTelemetry 工具</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">可观测性平台 New Relic 发布全新 AI Agent 平台，集成 OpenTelemetry 工具，帮助企业监控和管理 AI Agent 的运行状态。</p>
                     <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">推理模型</span>
-                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">Gemini</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">可观测性</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">Agent</span>
                     </div>
                 </article>
 
                 <!-- Release Card 6 -->
                 <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-start justify-between mb-4">
-                        <span class="category-badge px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 font-medium">Particle</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 font-medium">Guide Labs</span>
                         <span class="text-sm text-gray-400">02-24</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Particle AI 新闻应用：自动收听播客提取精华</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">AI 新闻应用 Particle 新增功能，能自动收听播客并提取有趣片段，免去用户手动筛选。</p>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Guide Labs 推出新型可解释 LLM</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Guide Labs 发布了一种全新的可解释大语言模型，让用户能够理解模型的推理过程，在 AI 可解释性领域迈出重要一步。</p>
                     <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">新闻AI</span>
-                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">播客</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">可解释性</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">LLM</span>
                     </div>
                 </article>
             </div>
@@ -395,25 +399,25 @@
                 <!-- Research Card 1 -->
                 <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
                     <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white text-2xl mb-4">⚡</div>
-                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">单 Token 训练技术将推理速度提升 3 倍</h3>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">LLM 推理速度三倍提升</h3>
                     <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">VentureBeat</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">仅在模型架构中添加一个特殊 token，无需辅助模型或基础设施变更，即可将 LLM 推理速度提升三倍。</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">新训练技术仅通过添加单个特殊 token 即可将 LLM 推理速度提升三倍，无需辅助模型或基础设施变更</p>
                 </article>
 
                 <!-- Research Card 2 -->
                 <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-2xl mb-4">🤖</div>
-                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">群体进化 Agent 框架匹配人类工程系统</h3>
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-2xl mb-4">🧬</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">群体进化 Agent 框架</h3>
                     <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">UC Santa Barbara</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">来自 UCSB 的新框架在 SWE-bench 上匹配人类工程化 AI 系统表现，且部署零额外推理成本。</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">新框架在 SWE-bench 上匹配人工设计的 AI 系统，且部署时零额外推理成本</p>
                 </article>
 
                 <!-- Research Card 3 -->
                 <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
                     <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white text-2xl mb-4">📄</div>
-                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">为什么 AI 读 PDF 这么差？</h3>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">The Verge</p>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">深度分析 PDF 解析对 AI 的挑战——PDF 从未被设计为机器可读格式，这一根本矛盾仍未解决。</p>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">为什么 AI 读不好 PDF？</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">The Verge 深度报道</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">PDF 格式从未为机器阅读而设计，深入分析了 AI 解析 PDF 的根本性困难</p>
                 </article>
             </div>
         </section>
@@ -432,81 +436,81 @@
                 <!-- Industry Card 1 -->
                 <article class="news-card glass-card rounded-xl p-5 shadow-md border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-2xl">🏢</span>
-                        <span class="text-sm font-semibold text-blue-600 dark:text-blue-400">企业AI</span>
+                        <span class="text-2xl">💵</span>
+                        <span class="text-sm font-semibold text-green-600 dark:text-green-400">$30B 投资</span>
                     </div>
-                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">OpenAI 请来咨询公司</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">OpenAI 引入咨询公司助力企业市场推进</p>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Nvidia → OpenAI</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Nvidia 接近完成 $30B 股权投资 OpenAI，此前 $100B 交易搁浅</p>
                 </article>
 
                 <!-- Industry Card 2 -->
                 <article class="news-card glass-card rounded-xl p-5 shadow-md border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-2xl">🇮🇳</span>
-                        <span class="text-sm font-semibold text-green-600 dark:text-green-400">$5B 承诺</span>
+                        <span class="text-2xl">💰</span>
+                        <span class="text-sm font-semibold text-blue-600 dark:text-blue-400">$47M 融资</span>
                     </div>
-                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">General Catalyst 投资印度</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">承诺五年内向印度投资 50 亿美元</p>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Nimble</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">为 AI Agent 提供实时网页数据访问能力</p>
                 </article>
 
                 <!-- Industry Card 3 -->
                 <article class="news-card glass-card rounded-xl p-5 shadow-md border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-2xl">🎮</span>
-                        <span class="text-sm font-semibold text-purple-600 dark:text-purple-400">收购</span>
+                        <span class="text-2xl">🤝</span>
+                        <span class="text-sm font-semibold text-purple-600 dark:text-purple-400">投资者忠诚度</span>
                     </div>
-                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Epic 收购 Meshcapade</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">收购数字人动画 AI 技术公司，增强 Unreal Engine</p>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">OpenAI VC → Anthropic</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">至少 12 家 OpenAI 投资方现在同时投资 Anthropic</p>
                 </article>
 
                 <!-- Industry Card 4 -->
                 <article class="news-card glass-card rounded-xl p-5 shadow-md border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-2xl">📱</span>
-                        <span class="text-sm font-semibold text-orange-600 dark:text-orange-400">合作</span>
+                        <span class="text-2xl">🎵</span>
+                        <span class="text-sm font-semibold text-orange-600 dark:text-orange-400">收购</span>
                     </div>
-                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Samsung + Perplexity</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">三星将 Perplexity AI 搜索集成到 Galaxy AI</p>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Google + ProducerAI</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">AI 音乐生成器 ProducerAI 加入 Google Labs</p>
                 </article>
 
                 <!-- Industry Card 5 -->
                 <article class="news-card glass-card rounded-xl p-5 shadow-md border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-2xl">💎</span>
-                        <span class="text-sm font-semibold text-cyan-600 dark:text-cyan-400">$1.3B</span>
+                        <span class="text-2xl">🎮</span>
+                        <span class="text-sm font-semibold text-cyan-600 dark:text-cyan-400">收购</span>
                     </div>
-                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Peak XV 融资 13 亿美元</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">加倍押注 AI，全球 VC 在印度竞争加剧</p>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Epic + Meshcapade</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Epic Games 收购数字人动画 AI 公司，增强 Unreal Engine</p>
                 </article>
 
                 <!-- Industry Card 6 -->
                 <article class="news-card glass-card rounded-xl p-5 shadow-md border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-2xl">📺</span>
-                        <span class="text-sm font-semibold text-red-600 dark:text-red-400">广告</span>
+                        <span class="text-2xl">📱</span>
+                        <span class="text-sm font-semibold text-pink-600 dark:text-pink-400">合作</span>
                     </div>
-                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">ChatGPT 开始展示广告</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Expedia、高通、百思买等品牌广告出现在 ChatGPT 回复中</p>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Samsung + Perplexity</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Samsung 将 Perplexity AI 搜索集成到 Galaxy AI 中</p>
                 </article>
 
                 <!-- Industry Card 7 -->
                 <article class="news-card glass-card rounded-xl p-5 shadow-md border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-2xl">🎬</span>
-                        <span class="text-sm font-semibold text-pink-600 dark:text-pink-400">版权</span>
+                        <span class="text-2xl">👤</span>
+                        <span class="text-sm font-semibold text-indigo-600 dark:text-indigo-400">人才</span>
                     </div>
-                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Netflix 威胁起诉字节跳动</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">给 ByteDance 3 天时间停止 Seedance AI 侵权</p>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">OpenAI 挖角 Instagram</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Instagram 全球合作副总裁 Charles Porch 加入 OpenAI</p>
                 </article>
 
                 <!-- Industry Card 8 -->
                 <article class="news-card glass-card rounded-xl p-5 shadow-md border border-gray-200/50 dark:border-gray-700/50">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-2xl">🤖</span>
-                        <span class="text-sm font-semibold text-indigo-600 dark:text-indigo-400">人才</span>
+                        <span class="text-2xl">📢</span>
+                        <span class="text-sm font-semibold text-yellow-600 dark:text-yellow-400">广告</span>
                     </div>
-                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">OpenClaw 创始人加入 OpenAI</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Peter Steinberger 将致力于"让 Agent 惠及每个人"</p>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">ChatGPT 开始投放广告</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Expedia、Qualcomm、Best Buy 等品牌广告出现在 ChatGPT 回复中</p>
                 </article>
             </div>
         </section>
@@ -527,35 +531,35 @@
                     <div class="flex items-center gap-2 mb-3">
                         <span class="text-sm px-2 py-1 rounded bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400">美国</span>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Meta 斥资 6500 万美元影响选举，推动 AI 立法</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">成立两个新的超级政治行动委员会，支持对 AI 友好的政客</p>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">国防部长召见 Anthropic CEO Amodei，讨论 Claude 军事用途</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">涉及的不仅是 2 亿美元军事合同，更关乎 AI 在国防领域的未来定位</p>
                 </article>
 
                 <!-- Policy Card 2 -->
-                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 border-l-4 border-l-blue-500">
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 border-l-4 border-l-orange-500">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-sm px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">全球</span>
+                        <span class="text-sm px-2 py-1 rounded bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">版权</span>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">X 平台开发"Made with AI"标签</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">响应印度要求社交平台采用 C2PA 等内容溯源系统的命令</p>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Netflix 限 ByteDance 三天内停止 Seedance AI 侵权</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Seedance 被指为"高速盗版引擎"，生成大量未经授权的衍生作品</p>
                 </article>
 
                 <!-- Policy Card 3 -->
-                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 border-l-4 border-l-green-500">
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 border-l-4 border-l-blue-500">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-sm px-2 py-1 rounded bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">环境</span>
+                        <span class="text-sm px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">美国</span>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">NAACP 威胁起诉 xAI 数据中心非法排污</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">Musk 的 Colossus 2 数据中心在密西西比州未经许可安装燃气轮机</p>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Meta 投入 $65M 影响选举，推动 AI 友好立法</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">资金流向两个新 Super PAC，分别面向共和党和民主党</p>
                 </article>
 
                 <!-- Policy Card 4 -->
-                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 border-l-4 border-l-purple-500">
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 border-l-4 border-l-green-500">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="text-sm px-2 py-1 rounded bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">宗教</span>
+                        <span class="text-sm px-2 py-1 rounded bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">全球</span>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">教皇告诫神父：用脑子写讲道词，别用 AI</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm">HN 490 points — 教皇 Leo XIV 明确反对使用 AI 撰写宗教讲道</p>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">印度 AI 影响力峰会持续进行</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Google 宣布新的全球合作伙伴关系和资金，Anthropic 开设班加罗尔办公室</p>
                 </article>
             </div>
         </section>
@@ -574,30 +578,63 @@
                 <!-- Tool Card 1 -->
                 <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 relative overflow-hidden">
                     <div class="absolute top-0 right-0 px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold rounded-bl-xl">🔥 HOT</div>
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 mt-4">LLM Timeline</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">从 Transformer (2017) 到 GPT-5.3 (2026)，收录 171 个 LLM 的完整时间线可视化，HN 93 points</p>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 mt-4">HuggingFace Agent Skills</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">HuggingFace 发布 Agent Skills 框架，为 AI Agent 提供可复用的技能模块，HN 41 points</p>
                     <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 rounded bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">可视化</span>
-                        <span class="text-xs px-2 py-1 rounded bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">历史</span>
+                        <span class="text-xs px-2 py-1 rounded bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">Agent</span>
+                        <span class="text-xs px-2 py-1 rounded bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">开源</span>
                     </div>
                 </article>
 
                 <!-- Tool Card 2 -->
                 <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Claude Code Security</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Anthropic 推出 Claude Code 安全扫描功能，可检测代码库漏洞并建议修补方案，限量研究预览中</p>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Emdash</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">开源 Agentic 开发环境，为 AI Agent 开发提供完整工具链，HN Show HN 项目</p>
                     <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">安全</span>
-                        <span class="text-xs px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">代码审计</span>
+                        <span class="text-xs px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">IDE</span>
+                        <span class="text-xs px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">开源</span>
                     </div>
                 </article>
 
                 <!-- Tool Card 3 -->
                 <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">OpenClaw 安全风险持续发酵</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Meta 安全研究员实测 OpenClaw 删除了她的邮件收件箱；企业安全团队持续发出警告</p>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Claude Code Security</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Anthropic 推出 Claude Code Security 功能，可扫描代码库安全漏洞并建议修复补丁</p>
                     <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 rounded bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400">安全风险</span>
+                        <span class="text-xs px-2 py-1 rounded bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">安全</span>
+                        <span class="text-xs px-2 py-1 rounded bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">代码审计</span>
+                    </div>
+                </article>
+
+                <!-- Tool Card 4 -->
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">KiloClaw</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">基于 Fly.io 多租户 VM 架构的 AI Agent 运行平台，无需用户自行配置硬件</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 rounded bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">平台</span>
+                        <span class="text-xs px-2 py-1 rounded bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">Agent</span>
+                    </div>
+                </article>
+
+                <!-- Tool Card 5 -->
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Google Antigravity</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Google 的 "Vibe Coding" 平台因限制开发者使用引发争议，被指"恶意使用"</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 rounded bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400">Vibe Coding</span>
+                        <span class="text-xs px-2 py-1 rounded bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400">争议</span>
+                    </div>
+                </article>
+
+                <!-- Tool Card 6 -->
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs px-2 py-1 rounded bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-bold">⚠️ 安全</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">OpenClaw Agent 失控事件</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Meta AI 安全研究员的 OpenClaw Agent 在真实邮箱中失控删除邮件，引发 AI Agent 安全讨论</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 rounded bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400">安全事件</span>
                         <span class="text-xs px-2 py-1 rounded bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400">Agent</span>
                     </div>
                 </article>
@@ -620,25 +657,25 @@
                     <div class="space-y-6">
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-gray-900 dark:text-white">模型蒸馏 / IP 保护</span>
-                                <span class="text-red-500 font-bold">🔥 +60%</span>
+                                <span class="font-semibold text-gray-900 dark:text-white">AI 蒸馏攻击 / 模型安全</span>
+                                <span class="text-green-500 font-bold">↗️ +60%</span>
                             </div>
                             <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                                <div class="h-full w-[98%] bg-gradient-to-r from-red-500 to-orange-500 rounded-full"></div>
+                                <div class="h-full w-[95%] trending-bar rounded-full"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-gray-900 dark:text-white">AI Agent 安全</span>
-                                <span class="text-green-500 font-bold">↗️ +35%</span>
+                                <span class="font-semibold text-gray-900 dark:text-white">AI 芯片军备竞赛</span>
+                                <span class="text-green-500 font-bold">↗️ +45%</span>
                             </div>
                             <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                                <div class="h-full w-[90%] trending-bar rounded-full"></div>
+                                <div class="h-full w-[90%] bg-gradient-to-r from-red-500 to-orange-500 rounded-full"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-gray-900 dark:text-white">AI 芯片出口管制</span>
+                                <span class="font-semibold text-gray-900 dark:text-white">企业 AI Agent</span>
                                 <span class="text-green-500 font-bold">↗️ +30%</span>
                             </div>
                             <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
@@ -647,8 +684,8 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-gray-900 dark:text-white">AI 基础设施投资</span>
-                                <span class="text-green-500 font-bold">↗️ +20%</span>
+                                <span class="font-semibold text-gray-900 dark:text-white">AI 版权纠纷</span>
+                                <span class="text-green-500 font-bold">↗️ +25%</span>
                             </div>
                             <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                                 <div class="h-full w-[80%] bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
@@ -656,29 +693,31 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="font-semibold text-gray-900 dark:text-white">印度 AI 生态</span>
-                                <span class="text-green-500 font-bold">↗️ +25%</span>
+                                <span class="font-semibold text-gray-900 dark:text-white">AI Agent 安全风险</span>
+                                <span class="text-green-500 font-bold">↗️ +35%</span>
                             </div>
                             <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                                <div class="h-full w-[75%] bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"></div>
+                                <div class="h-full w-[75%] bg-gradient-to-r from-yellow-500 to-red-500 rounded-full"></div>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Word Cloud Style -->
                     <div class="flex flex-wrap items-center justify-center gap-3 p-6 bg-gray-100 dark:bg-gray-800 rounded-2xl">
-                        <span class="text-3xl font-bold text-red-600 dark:text-red-400">蒸馏攻击</span>
-                        <span class="text-2xl font-semibold text-purple-600 dark:text-purple-400">Anthropic</span>
-                        <span class="text-xl font-bold text-blue-600 dark:text-blue-400">DeepSeek</span>
-                        <span class="text-2xl font-semibold text-orange-600 dark:text-orange-400">Nvidia</span>
-                        <span class="text-lg text-green-600 dark:text-green-400">Stargate</span>
-                        <span class="text-xl font-bold text-pink-600 dark:text-pink-400">OpenAI</span>
-                        <span class="text-lg text-cyan-600 dark:text-cyan-400">出口管制</span>
-                        <span class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400">Agent</span>
-                        <span class="text-lg text-emerald-600 dark:text-emerald-400">印度</span>
-                        <span class="text-xl text-violet-600 dark:text-violet-400">OpenClaw</span>
-                        <span class="text-lg font-semibold text-amber-600 dark:text-amber-400">Qwen3.5</span>
-                        <span class="text-xl text-rose-600 dark:text-rose-400">Gemini 3.1</span>
+                        <span class="text-3xl font-bold text-purple-600 dark:text-purple-400">Anthropic</span>
+                        <span class="text-2xl font-semibold text-blue-600 dark:text-blue-400">蒸馏攻击</span>
+                        <span class="text-xl font-bold text-green-600 dark:text-green-400">Meta</span>
+                        <span class="text-2xl font-semibold text-orange-600 dark:text-orange-400">AMD</span>
+                        <span class="text-lg text-red-600 dark:text-red-400">DeepSeek</span>
+                        <span class="text-xl font-bold text-pink-600 dark:text-pink-400">Agent</span>
+                        <span class="text-lg text-cyan-600 dark:text-cyan-400">Nvidia</span>
+                        <span class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400">OpenAI</span>
+                        <span class="text-lg text-emerald-600 dark:text-emerald-400">Gemini 3.1</span>
+                        <span class="text-xl text-violet-600 dark:text-violet-400">Cowork</span>
+                        <span class="text-lg font-semibold text-amber-600 dark:text-amber-400">Seedance</span>
+                        <span class="text-xl text-rose-600 dark:text-rose-400">$100B</span>
+                        <span class="text-lg text-teal-600 dark:text-teal-400">OpenClaw</span>
+                        <span class="text-xl font-semibold text-sky-600 dark:text-sky-400">Persona</span>
                     </div>
                 </div>
             </div>
@@ -690,7 +729,7 @@
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">📊 数据统计</h3>
                 <div class="grid grid-cols-2 md:grid-cols-6 gap-6">
                     <div class="text-center">
-                        <div class="text-4xl font-bold gradient-text">28+</div>
+                        <div class="text-4xl font-bold gradient-text">30+</div>
                         <div class="text-gray-500 dark:text-gray-400 text-sm mt-1">总新闻数</div>
                     </div>
                     <div class="text-center">
@@ -706,8 +745,8 @@
                         <div class="text-gray-500 dark:text-gray-400 text-sm mt-1">产业新闻</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-4xl font-bold text-purple-600 dark:text-purple-400">3</div>
-                        <div class="text-gray-500 dark:text-gray-400 text-sm mt-1">开源工具</div>
+                        <div class="text-4xl font-bold text-purple-600 dark:text-purple-400">6</div>
+                        <div class="text-gray-500 dark:text-gray-400 text-sm mt-1">工具开源</div>
                     </div>
                     <div class="text-center">
                         <div class="text-4xl font-bold text-red-600 dark:text-red-400">4</div>
@@ -725,7 +764,7 @@
             <h2 class="text-2xl font-bold mb-2">AI Daily News Digest</h2>
             <p class="text-gray-400 mb-8">由 Cursor AI 自动生成 · Powered by Cursor AI</p>
             <div class="flex justify-center gap-6 text-gray-400">
-                <span>📅 2026年02月24日</span>
+                <span>📅 2026年02月25日</span>
                 <span>🕐 18:00 更新</span>
             </div>
             <div class="mt-8 pt-8 border-t border-gray-800">
@@ -735,7 +774,6 @@
     </footer>
 
     <script>
-        // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
         const html = document.documentElement;
         
