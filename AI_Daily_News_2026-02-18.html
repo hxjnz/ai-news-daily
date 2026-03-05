@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 每日速报 | 2026-02-18</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'gradient': 'gradient 8s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .dark .glass-card {
+            background: rgba(30, 30, 40, 0.8);
+        }
+        .news-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .news-card:hover {
+            transform: translateY(-4px);
+        }
+        .category-badge {
+            font-size: 0.7rem;
+            letter-spacing: 0.05em;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+        .light-hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        .trending-bar {
+            background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6);
+            background-size: 200% 100%;
+            animation: gradient 3s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 font-sans transition-colors duration-300">
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="fixed top-4 right-4 z-50 p-3 rounded-full glass-card shadow-lg hover:scale-110 transition-transform">
+        <svg class="w-6 h-6 text-gray-800 dark:text-yellow-300 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/>
+        </svg>
+        <svg class="w-6 h-6 text-gray-800 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+        </svg>
+    </button>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient dark:hero-gradient">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse-slow"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white/80 text-sm mb-8">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                实时更新 · 2026年02月18日
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight">
+                <span class="block">🤖 AI 每日速报</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-white/70 mb-8 font-light">
+                AI Daily News Digest
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-white/60 text-sm mb-12">
+                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm">
+                    <span>📰</span> 25+ 条新闻
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm">
+                    <span>🌐</span> 10+ 来源
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm">
+                    <span>🕐</span> 16:00 更新
+                </div>
+            </div>
+            
+            <a href="#top-stories" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-all hover:scale-105 shadow-2xl">
+                开始阅读
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </a>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+            <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-16">
+        
+        <!-- Top Stories Section -->
+        <section id="top-stories" class="mb-20">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-1 h-12 bg-gradient-to-b from-red-500 to-orange-500 rounded-full"></div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">📌 今日要闻</h2>
+                    <p class="text-gray-500 dark:text-gray-400">Top Stories</p>
+                </div>
+            </div>
+            
+            <div class="grid gap-6">
+                <!-- Top Story 1 -->
+                <article class="news-card glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="category-badge px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-semibold uppercase">重大发布</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">Anthropic</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+                        🚀 Anthropic 发布 Claude Sonnet 4.6，HN 420 票热议
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
+                        Claude Sonnet 4.6 全面升级编码、计算机使用、长上下文推理、Agent 规划、知识工作与设计能力，配备 100 万 token 上下文窗口（beta），定价保持 $3/$15 每百万 token，现为 claude.ai 与 Claude Cowork 默认模型。
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
+                            <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+                            1M token 上下文（beta）
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
+                            <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+                            与 Sonnet 4.5 同价
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm">
+                            <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+                            HN 355 条评论
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-400">影响分析: 企业级 AI 与编码市场持续领跑</span>
+                        <a href="https://www.anthropic.com/news/claude-sonnet-4-6" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
+                            阅读原文 →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Top Story 2 -->
+                <article class="news-card glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="category-badge px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-semibold uppercase">产业动态</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">TechCrunch</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+                        🤝 Mistral AI 收购 Koyeb，首次并购支撑云野心
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
+                        Mistral AI 宣布收购 Koyeb，这是其首次收购，旨在强化云与部署能力，支撑其从模型到平台的战略扩张。
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-400">影响分析: 欧洲 AI 龙头加速云与基础设施布局</span>
+                        <a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
+                            阅读原文 →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Top Story 3 -->
+                <article class="news-card glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="category-badge px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-semibold uppercase">政策法规</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">TechCrunch</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+                        🏛️ 欧洲议会禁止议员设备使用 AI， citing 安全风险
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
+                        欧洲议会以安全风险为由，禁止在议员设备上使用 AI，反映出立法机构对 AI 数据与操作安全的谨慎态度。
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-400">影响分析: 政企 AI 使用边界进一步明确</span>
+                        <a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
+                            阅读原文 →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Top Story 4 -->
+                <article class="news-card glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="category-badge px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-semibold uppercase">重大发布</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">TechCrunch</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+                        🌐 WordPress.com 推出 AI 助手：可编辑、调样式、生成图片
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
+                        WordPress.com 新增 AI 助手，支持通过自然语言编辑内容、调整样式、创建图片等，可选启用，进一步降低建站门槛。
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-400">影响分析: 内容与建站工具全面 AI 化</span>
+                        <a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
+                            阅读原文 →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Top Story 5 -->
+                <article class="news-card glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="category-badge px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-semibold uppercase">产业动态</span>
+                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">TechCrunch</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+                        🇮🇳 印度力争 2028 年前吸引超 2000 亿美元 AI 基础设施投资；Adani 承诺 1000 亿
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
+                        印度政府与本土巨头齐发力：印度计划吸引超过 2000 亿美元 AI 基础设施投资；Adani 承诺投入 1000 亿美元建设 AI 数据中心，争夺全球 AI 产业链地位。
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-400">影响分析: 全球 AI 基建与资本向印度倾斜</span>
+                        <a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-medium hover:opacity-80 transition-opacity">
+                            阅读原文 →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Major Releases Section -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-1 h-12 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">🚀 重大发布</h2>
+                    <p class="text-gray-500 dark:text-gray-400">Major Releases</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="category-badge px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-medium">Anthropic</span>
+                        <span class="text-sm text-gray-400">02-17</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Claude Sonnet 4.6 正式发布</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">全场景前沿性能：编码、Agent、专业工作，1M token 上下文 beta，定价不变。</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">LLM</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">Agent</span>
+                    </div>
+                </article>
+
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="category-badge px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-medium">WordPress</span>
+                        <span class="text-sm text-gray-400">02-18</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">WordPress.com AI 助手</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">可选 AI 助手：编辑、调样式、生成图片、翻译与重组站点，用提示词即可操作。</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">建站</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">生成式AI</span>
+                    </div>
+                </article>
+
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="category-badge px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 font-medium">OpenAI</span>
+                        <span class="text-sm text-gray-400">02-16</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">ChatGPT 推出 Lockdown Mode</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">收紧与外部系统交互，降低 prompt injection 导致的数据外泄风险，并引入 Elevated Risk 标签。</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">安全</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">ChatGPT</span>
+                    </div>
+                </article>
+
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="category-badge px-3 py-1 rounded-full bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 font-medium">Cohere</span>
+                        <span class="text-sm text-gray-400">02-17</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Cohere 发布多语言开源模型家族</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">推出多语言开源模型系列，面向全球多语言场景与本地化部署。</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">开源</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">多语言</span>
+                    </div>
+                </article>
+
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="category-badge px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-medium">TechCrunch</span>
+                        <span class="text-sm text-gray-400">02-18</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">2026 年美国 17 家 AI 公司融资超 1 亿美元</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">TechCrunch 梳理 2026 年迄今美国融资额达 1 亿美元及以上的 17 家 AI 公司名单。</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">融资</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">榜单</span>
+                    </div>
+                </article>
+
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="category-badge px-3 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-medium">Google / Microsoft</span>
+                        <span class="text-sm text-gray-400">02-12</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">WebMCP 标准：网站向 AI Agent 暴露可调用工具</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">用结构化函数调用替代高成本爬虫，让网站通过浏览器向 AI Agent 提供能力。</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">MCP</span>
+                        <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">标准</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-1 h-12 bg-gradient-to-b from-orange-500 to-yellow-500 rounded-full"></div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">📊 研究突破</h2>
+                    <p class="text-gray-500 dark:text-gray-400">Research Breakthroughs</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white text-2xl mb-4">🧠</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Nvidia DMS：KV Cache 压缩 8x</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Nvidia 研究</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">动态内存稀疏化（DMS）在保持推理精度的前提下将 LLM KV cache 压缩最高 8 倍，且可在数小时内适配现有模型。</p>
+                </article>
+
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-2xl mb-4">📝</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">语义消融：AI 写作为何泛化无聊</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">The Register / HN 162 票</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">从语义消融角度解释 AI 生成文本为何趋向泛化与无聊，引发社区对生成质量与多样性的讨论。</p>
+                </article>
+
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white text-2xl mb-4">🃏</div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">LLM 互相对战玩《魔法风云会》</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">Mage Bench / HN</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">研究者训练 LLM 互相对战玩 Magic: The Gathering，探索复杂规则与多步决策下的 AI 能力。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Industry News Section -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-1 h-12 bg-gradient-to-b from-green-500 to-emerald-500 rounded-full"></div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">💼 产业动态</h2>
+                    <p class="text-gray-500 dark:text-gray-400">Industry News</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <article class="news-card glass-card rounded-xl p-5 shadow-md border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-2xl">🤖</span>
+                        <span class="text-sm font-semibold text-green-600 dark:text-green-400">企业 Agent</span>
+                    </div>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Infosys + Anthropic</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">合作构建电信等受监管行业的企业级 AI Agent</p>
+                </article>
+
+                <article class="news-card glass-card rounded-xl p-5 shadow-md border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-2xl">💰</span>
+                        <span class="text-sm font-semibold text-blue-600 dark:text-blue-400">$335M / $4B</span>
+                    </div>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Ricursive Intelligence</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">4 个月内融资 3.35 亿美元，估值 40 亿美元</p>
+                </article>
+
+                <article class="news-card glass-card rounded-xl p-5 shadow-md border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-2xl">🇮🇳</span>
+                        <span class="text-sm font-semibold text-orange-600 dark:text-orange-400">ARR $100M+</span>
+                    </div>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">Emergent（印度）</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">vibe-coding 创业公司仅 8 个月 ARR 超 1 亿美元</p>
+                </article>
+
+                <article class="news-card glass-card rounded-xl p-5 shadow-md border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-2xl">👤</span>
+                        <span class="text-sm font-semibold text-purple-600 dark:text-purple-400">人事</span>
+                    </div>
+                    <h3 class="font-bold text-gray-900 dark:text-white mb-2">OpenClaw 创始人加入 OpenAI</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Peter Steinberger 加入 OpenAI，推动「把 Agent 带给每个人」</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Policy Section -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-1 h-12 bg-gradient-to-b from-red-500 to-pink-500 rounded-full"></div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">🏛️ 政策法规</h2>
+                    <p class="text-gray-500 dark:text-gray-400">Policy & Regulation</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 border-l-4 border-l-red-500">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-sm px-2 py-1 rounded bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400">欧盟</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">欧洲议会禁止议员设备使用 AI</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">以安全风险为由，在立法者设备上禁用 AI</p>
+                </article>
+
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 border-l-4 border-l-blue-500">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-sm px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">美国</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">NAACP 威胁起诉 xAI 密西西比燃气轮机</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">指控 Colossus 2 数据中心无许可安装燃气轮机，热成像显示十余台在运行</p>
+                </article>
+
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 border-l-4 border-l-green-500">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-sm px-2 py-1 rounded bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">美国</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">五角大楼可能将 Anthropic 列为供应链风险</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">若成真，与美军做生意的企业须与 Anthropic 切断关系；双方数月来就军方使用方式谈判</p>
+                </article>
+
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 border-l-4 border-l-purple-500">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="text-sm px-2 py-1 rounded bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">欧盟</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">欧盟隐私监管调查 X 平台 Grok 性化 deepfake</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">上月平台上数百万张性化图片（含儿童）引发新一轮调查</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-1 h-12 bg-gradient-to-b from-purple-500 to-indigo-500 rounded-full"></div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">🛠️ 工具与开源</h2>
+                    <p class="text-gray-500 dark:text-gray-400">Tools & Open Source</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold rounded-bl-xl">🔥 HOT</div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 mt-4">Continue – 可纳入 CI 的 AI 检查</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">源码受控的 AI 检查，可在 CI 中强制执行，HN 28 points</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 rounded bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">CI/CD</span>
+                        <span class="text-xs px-2 py-1 rounded bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400">代码质量</span>
+                    </div>
+                </article>
+
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs px-2 py-1 rounded bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-bold">YC W26</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Sonarly – 生产告警 AI Agent</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">AI Agent 自动分类并修复生产环境告警，Launch HN</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">Agent</span>
+                        <span class="text-xs px-2 py-1 rounded bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">运维</span>
+                    </div>
+                </article>
+
+                <article class="news-card glass-card rounded-2xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Google Docs 音频摘要</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Gemini 驱动的 Audio Summaries 对长文档生成语音摘要，已在部分 Workspace 与 Google AI 用户中推出</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 rounded bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">Workspace</span>
+                        <span class="text-xs px-2 py-1 rounded bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400">Gemini</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Trends Section -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-1 h-12 bg-gradient-to-b from-pink-500 to-rose-500 rounded-full"></div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">📈 本周趋势</h2>
+                    <p class="text-gray-500 dark:text-gray-400">Weekly Trends</p>
+                </div>
+            </div>
+            
+            <div class="glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-900 dark:text-white">Claude / Sonnet 4.6</span>
+                                <span class="text-green-500 font-bold">↗️ +35%</span>
+                            </div>
+                            <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                                <div class="h-full w-[95%] trending-bar rounded-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-900 dark:text-white">政策与合规</span>
+                                <span class="text-green-500 font-bold">↗️ +30%</span>
+                            </div>
+                            <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                                <div class="h-full w-[85%] bg-gradient-to-r from-red-500 to-orange-500 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-900 dark:text-white">印度 AI 基建与融资</span>
+                                <span class="text-green-500 font-bold">↗️ +40%</span>
+                            </div>
+                            <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                                <div class="h-full w-[80%] bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-gray-900 dark:text-white">Agent / OpenClaw</span>
+                                <span class="text-gray-500 font-bold">→ 持平</span>
+                            </div>
+                            <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                                <div class="h-full w-[70%] bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap items-center justify-center gap-3 p-6 bg-gray-100 dark:bg-gray-800 rounded-2xl">
+                        <span class="text-3xl font-bold text-purple-600 dark:text-purple-400">Claude</span>
+                        <span class="text-2xl font-semibold text-blue-600 dark:text-blue-400">Sonnet 4.6</span>
+                        <span class="text-xl font-bold text-green-600 dark:text-green-400">Mistral</span>
+                        <span class="text-2xl font-semibold text-orange-600 dark:text-orange-400">印度</span>
+                        <span class="text-lg text-red-600 dark:text-red-400">欧洲议会</span>
+                        <span class="text-xl font-bold text-pink-600 dark:text-pink-400">xAI</span>
+                        <span class="text-lg text-cyan-600 dark:text-cyan-400">OpenClaw</span>
+                        <span class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400">OpenAI</span>
+                        <span class="text-lg text-emerald-600 dark:text-emerald-400">WordPress</span>
+                        <span class="text-xl text-violet-600 dark:text-violet-400">WebMCP</span>
+                        <span class="text-lg font-semibold text-amber-600 dark:text-amber-400">Lockdown Mode</span>
+                        <span class="text-xl text-rose-600 dark:text-rose-400">Anthropic</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="mb-20">
+            <div class="glass-card rounded-3xl p-8 shadow-xl border border-gray-200/50 dark:border-gray-700/50">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">📊 数据统计</h3>
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-6">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold gradient-text">25+</div>
+                        <div class="text-gray-500 dark:text-gray-400 text-sm mt-1">总新闻数</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-blue-600 dark:text-blue-400">6</div>
+                        <div class="text-gray-500 dark:text-gray-400 text-sm mt-1">重大发布</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-orange-600 dark:text-orange-400">3</div>
+                        <div class="text-gray-500 dark:text-gray-400 text-sm mt-1">研究突破</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-green-600 dark:text-green-400">4</div>
+                        <div class="text-gray-500 dark:text-gray-400 text-sm mt-1">产业新闻</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-purple-600 dark:text-purple-400">3</div>
+                        <div class="text-gray-500 dark:text-gray-400 text-sm mt-1">工具开源</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-red-600 dark:text-red-400">4</div>
+                        <div class="text-gray-500 dark:text-gray-400 text-sm mt-1">政策法规</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="text-4xl mb-4">🤖</div>
+            <h2 class="text-2xl font-bold mb-2">AI Daily News Digest</h2>
+            <p class="text-gray-400 mb-8">由 Cursor AI 自动生成 · Powered by Cursor AI</p>
+            <div class="flex justify-center gap-6 text-gray-400">
+                <span>📅 2026年02月18日</span>
+                <span>🕐 16:00 更新</span>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800">
+                <p class="text-gray-500 text-sm">📧 反馈建议 · ⭐ 收藏订阅 · 🔄 分享转发</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.news-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

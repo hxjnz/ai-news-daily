@@ -6,7 +6,8 @@
     "fetch": "node scripts/fetch-news.js",
     "generate": "node scripts/generate-report.js",
     "publish": "node publish-to-notion.js",
-    "all": "npm run generate && npm run publish",
+    "daily": "node create-daily-page.js",
+    "all": "npm run generate && npm run publish && npm run daily",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["ai", "news", "daily", "automation"],
